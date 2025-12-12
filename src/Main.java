@@ -2,6 +2,7 @@ import employeewagecal.CompanyEmpWage;
 import employeewagecal.Employee;
 import employeewagecal.EmployeeWageBuilder;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 
@@ -14,10 +15,9 @@ public class Main {
         CompanyEmpWage companyEmpWage=new CompanyEmpWage();
 
 
+        ArrayList<CompanyEmpWage> arr=new ArrayList<>();
 
-        CompanyEmpWage arr[]=new CompanyEmpWage[3];
-
-        for(int i=0;i<arr.length;i++){
+        for(int i=0;i<3;i++){
             System.out.println("Enter the Company name");
             String company=scanner.nextLine();
             System.out.println("Enter the wage per hour ");
@@ -30,7 +30,9 @@ public class Main {
             int totalWage=ewb.computeWages(company,wagePerHour,maxHours,maxDays);
 
 
-            arr[i]=new CompanyEmpWage(company,wagePerHour,maxHours,maxDays,totalWage);
+
+            arr.add(new CompanyEmpWage(company,wagePerHour,maxHours,maxDays,totalWage));
+
 
 
 
