@@ -3,14 +3,14 @@ package employeewagecal;
 public class Employee {
 
 
+        static  int WAGE_PER_HOUR = 20;
+        static int FULL_TIME = 2;
+        static int PART_TIME = 1;
+        static int totalHours = 0;
+        static int totalDays = 0;
+        static int MAX_HOURS = 100;
+        static  int MAX_DAYS = 20;
         public static int computeWage() {
-            int WAGE_PER_HOUR = 20;
-            int FULL_TIME = 2;
-            int PART_TIME = 1;
-            int totalHours = 0;
-            int totalDays = 0;
-            int MAX_HOURS = 100;
-            int MAX_DAYS = 20;
 
             while(totalHours < MAX_HOURS && totalDays < MAX_DAYS) {
                 totalDays++;

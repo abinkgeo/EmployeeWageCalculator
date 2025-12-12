@@ -1,6 +1,7 @@
 package employeewagecal;
 
 import java.util.HashMap;
+import java.util.Scanner;
 
 public class EmployeeWageBuilder {
 
@@ -34,6 +35,8 @@ public class EmployeeWageBuilder {
         wageMap.put(company, total);
         return total;
     }
+
+
 
 
 }
