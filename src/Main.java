@@ -35,8 +35,6 @@ public class Main {
 
 
         }
-
-
         for(CompanyEmpWage c:arr){
             System.out.println(c);
         }

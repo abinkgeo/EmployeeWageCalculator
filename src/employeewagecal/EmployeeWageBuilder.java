@@ -39,6 +39,7 @@ public class EmployeeWageBuilder implements WageInterface {
         return total;
     }
 
+    @Override
     public int dailyWage(String company, int wagePerHour, int maxHours, int maxDays) {
 
         int hours = 0;
@@ -69,14 +70,14 @@ public class EmployeeWageBuilder implements WageInterface {
         return dailyWage;
     }
 
+    @Override
+    public int getCompanyWage(String company) {
 
-
-
-
-
-
-
-
+        if(wageMap.containsKey(company)){
+            return wageMap.get(company);
+        }
+        return 0;
+    }
 
 
 }
