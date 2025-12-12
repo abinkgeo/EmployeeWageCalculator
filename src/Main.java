@@ -29,11 +29,9 @@ public class Main {
             scanner.nextLine();
             int totalWage=ewb.computeWages(company,wagePerHour,maxHours,maxDays);
 
+            int dailyWage=ewb.dailyWage(company,wagePerHour,maxHours,maxDays);
 
-
-            arr.add(new CompanyEmpWage(company,wagePerHour,maxHours,maxDays,totalWage));
-
-
+            arr.add(new CompanyEmpWage(company,wagePerHour,maxHours,maxDays,totalWage,dailyWage));
 
 
         }

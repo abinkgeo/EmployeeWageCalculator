@@ -34,45 +34,48 @@ public class EmployeeWageBuilder implements WageInterface {
         }
 
         int total = hours * wagePerHour;
+
         wageMap.put(company, total);
         return total;
     }
-    public static void main(String[] args) {
 
-        Scanner scanner=new Scanner(System.in);
-        EmployeeWageBuilder ewb=new EmployeeWageBuilder();
+    public int dailyWage(String company, int wagePerHour, int maxHours, int maxDays) {
 
-        CompanyEmpWage companyEmpWage=new CompanyEmpWage();
+        int hours = 0;
+        int days = 0;
 
+        while (hours < maxHours && days < maxDays) {
+            days++;
+            int emp = (int)(Math.random() * 3);
+            int empHours = 0;
+            switch(emp) {
+                case 1:
+                    hours = 4;
+                    break;
+                case 2:
+                    hours = 8;
+                    break;
 
-        ArrayList<CompanyEmpWage> arr=new ArrayList<>();
+                default:
+                    hours = 0;
+            }
 
-        for(int i=0;i<3;i++){
-            System.out.println("Enter the Company name");
-            String company=scanner.nextLine();
-            System.out.println("Enter the wage per hour ");
-            int wagePerHour=scanner.nextInt();
-            System.out.println("Enter the max hours ");
-            int maxHours=scanner.nextInt();
-            System.out.println("Enter the maxdays ");
-            int maxDays=scanner.nextInt();
-            scanner.nextLine();
-            int totalWage=ewb.computeWages(company,wagePerHour,maxHours,maxDays);
-
-
-
-            arr.add(new CompanyEmpWage(company,wagePerHour,maxHours,maxDays,totalWage));
-
-
-
-
+            hours += empHours;
         }
 
+        int dailyWage = hours*wagePerHour;
 
-        for(CompanyEmpWage c:arr){
-            System.out.println(c);
-        }
+
+        return dailyWage;
     }
+
+
+
+
+
+
+
+
 
 
 

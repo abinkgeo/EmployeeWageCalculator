@@ -8,13 +8,14 @@ public class CompanyEmpWage {
        private int maxHours;
         private int maxDays;
        private int totalWage;
-
-    public CompanyEmpWage(String company, int wagePerHour, int maxHours, int maxDays, int totalWage) {
+        private int dailyWage;
+    public CompanyEmpWage(String company, int wagePerHour, int maxHours, int maxDays, int totalWage,int dailyWage) {
         this.company = company;
         this.wagePerHour = wagePerHour;
         this.maxHours = maxHours;
         this.maxDays = maxDays;
         this.totalWage = totalWage;
+        this.dailyWage=dailyWage;
     }
 
     public CompanyEmpWage() {
@@ -40,6 +41,7 @@ public class CompanyEmpWage {
         return totalWage;
     }
 
+
     @Override
     public String toString() {
         return "CompanyEmpWage{" +
@@ -48,6 +50,7 @@ public class CompanyEmpWage {
                 ", maxHours=" + maxHours +
                 ", maxDays=" + maxDays +
                 ", totalWage=" + totalWage +
+                ", dailyWage=" + dailyWage +
                 '}';
     }
 }
