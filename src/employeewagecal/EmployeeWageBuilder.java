@@ -3,10 +3,11 @@ package employeewagecal;
 import java.util.HashMap;
 import java.util.Scanner;
 
-public class EmployeeWageBuilder {
+public class EmployeeWageBuilder implements WageInterface {
 
     public HashMap<String, Integer> wageMap = new HashMap<>();
 
+    @Override
     public int computeWages(String company, int wagePerHour, int maxHours, int maxDays) {
 
         int hours = 0;
